@@ -1,0 +1,212 @@
+@import "../../mixins.scss";
+
+.footer {
+    background-color: var(--black3);
+    padding: 50px 0;
+    color: white;
+    position: relative;
+    margin-top: 200px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.2); // Adjust the color and opacity as needed
+        z-index: 1;
+    }
+
+    .contentWrapper {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .menuItems {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 20px;
+
+        @include md {
+            margin-bottom: 30px;
+            gap: 30px;
+        }
+
+        .menuItem {
+            transition: all ease 0.3s;
+            cursor: pointer;
+            font-size: 12px;
+
+            @include md {
+                font-size: 16px;
+            }
+
+            &:hover {
+                color: var(--pink);
+            }
+        }
+    }
+
+    .infoText {
+        font-size: 12px;
+        line-height: 20px;
+        opacity: 0.5;
+        text-align: center;
+        max-width: 800px;
+        margin-bottom: 20px;
+
+        p {
+            font-size: small;
+            margin-bottom: 20px;
+        }
+
+        span {
+            font-size: smaller;
+        }
+
+        @include md {
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .socialIcons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        .Insta_icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--black);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all ease 0.3s;
+
+            &:hover {
+                box-shadow: 0 0 0.625em var(--pink);
+                color: var(--pink);
+            }
+        }
+
+        .fb_icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--black);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all ease 0.3s;
+
+            &:hover {
+                box-shadow: 0 0 0.625em #316FF6;
+                color: #316FF6;
+            }
+        }
+
+        .twit_icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--black);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all ease 0.3s;
+
+            &:hover {
+                box-shadow: 0 0 0.625em #1DA1F2;
+                color: #1DA1F2;
+            }
+
+        }
+
+        .linkedIn_icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--black);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all ease 0.3s;
+
+            &:hover {
+                box-shadow: 0 0 0.625em #0077b5;
+                color: #0077b5;
+            }
+
+        }
+    }
+
+    .copywrite {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+
+        p {
+            font-size: 10px;
+            color: rgb(213, 201, 201);
+            ;
+        }
+
+        span {
+            font-size: 12px;
+            color: rgb(21, 179, 227);
+            ;
+        }
+    }
+
+    .privecy {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 10px;
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .privacyLinks {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 3px;
+            margin-left: 2px;
+            gap: 15px;
+
+            .privacyLink {
+                font-size: 12px;
+                color: rgb(213, 201, 201);
+                transition: color 0.3s;
+                text-decoration: none; 
+
+                &:hover {
+                    color: #c5b6e9;
+                }
+            }
+        }
+
+    }
+
+
+}
